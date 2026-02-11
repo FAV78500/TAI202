@@ -17,3 +17,15 @@ async def bienvenido():
         "mensaje":"Bienvenido a FastAPI",
         "estatus":"200",
     }
+
+# Endpoint de parametros obligatorios
+@app.get("/saludo/{nombre}")
+async def saludo(nombre: str):
+    return {"mensaje": f"Hola {nombre},bienvenido"}
+
+# Endpoint de parametros opcionales
+@app.get("/buscar/")
+async def buscar(q: str = None):
+    if q:
+        return {"mensaje": f"resultados para: {q}"}
+    return {"mensaje": "no hay termino de busqueda"}
