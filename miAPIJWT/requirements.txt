@@ -1,0 +1,7 @@
+uvicorn[standard]
+fastapi
+PyJWT
+passlib[bcrypt]
+python-multipart
+pytest
+httpx
