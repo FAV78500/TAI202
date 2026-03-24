@@ -1,7 +1,5 @@
 import asyncio
-from typing import option
-
-from flask import app
+from typing import Optional
 from app.data.database import usuarios
 from fastapi import APIRouter
 
